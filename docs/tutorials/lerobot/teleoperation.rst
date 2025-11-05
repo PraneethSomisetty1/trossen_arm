@@ -18,10 +18,10 @@ By running the following code, you can start your first **SAFE** teleoperation:
           --robot.type=widowxai_follower_robot \
           --robot.ip_address=192.168.1.4 \
           --robot.id=follower \
-          --robot.cameras='{
-            cam_low: {"type": "opencv", "index_or_path": "0", "width": 640, "height": 480, "fps": 30},
-            cam_high: {"type": "opencv", "index_or_path": "0", "width": 640, "height": 480, "fps": 30},
-          }' \
+          --robot.cameras="{
+            cam_left: {type: intelrealsense, serial_number_or_name: "000000000000", width: 640, height: 480, fps: 30},
+            cam_right: {type: intelrealsense, serial_number_or_name: "000000000000", width: 640, height: 480, fps: 30},
+            }" \
           --teleop.type=widowxai_leader_teleop \
           --teleop.ip_address=192.168.1.2 \
           --teleop.id=leader \
@@ -36,12 +36,12 @@ By running the following code, you can start your first **SAFE** teleoperation:
           --robot.left_arm_ip_address=192.168.1.5 \
           --robot.right_arm_ip_address=192.168.1.4 \
           --robot.id=bimanual_follower \
-          --robot.cameras= '{
-              cam_low: {"type": "opencv", "index_or_path": "0", "width": 640, "height": 480, "fps": 30},
-              cam_high: {"type": "opencv", "index_or_path": "0", "width": 640, "height": 480, "fps": 30},
-              cam_left_wrist: {"type": "opencv", "index_or_path": "0", "width": 640, "height": 480, "fps": 30},
-              cam_right_wrist: {"type": "opencv", "index_or_path": "0", "width": 640, "height": 480, "fps": 30},
-            }' \
+          --robot.cameras="{
+            cam_left: {type: intelrealsense, serial_number_or_name: "000000000000", width: 640, height: 480, fps: 30},
+            cam_right: {type: intelrealsense, serial_number_or_name: "000000000000", width: 640, height: 480, fps: 30},
+            cam_top: {type: intelrealsense, serial_number_or_name: "000000000000", width: 640, height: 480, fps: 30},
+            cam_low: {type: intelrealsense, serial_number_or_name: "000000000000", width: 640, height: 480, fps: 30},
+            }" \
           --teleop.type=bi_widowxai_leader_teleop \
           --teleop.left_arm_ip_address=192.168.1.3 \
           --teleop.right_arm_ip_address=192.168.1.2 \
